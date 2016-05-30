@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>api</title>
+	
+</head>
+<body>
+	<div ng-controller="Controlador" class="envoltura">
+		<div class="contenedor">
+			
+			<ul ng-repeat="d in data" class="lista" ng-click="func(d.name)">
+				<li>
+					<h1>{{d.name}}</h1>
+					<a ui-sref="urlArticle"><img src="{{d.image.medium}}"></a>
+					<!--div ng-bind-html="d.summary">{{d.summary}}</div-->
+					<div ng-bind-html="d.summary"></div>
+				</li>
+			</ul>
+			<ui-view></ui-view>
+		</div>	
+	</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<form>
+	<style type="text/css">
+
+		@font-face {
+
+			font-family: 'other';
+			/*src:url('styles/fonts/DINPro-Light.otf')format('opentype');*/
+			src:url('styles/fonts/DINPro-Bold.otf')format('opentype');
+
+		}
+		@font-face {
+			font-family: 'otherL';
+			/*src:url('styles/fonts/DINPro-Light.otf')format('opentype');*/
+			src:url('styles/fonts/DINPro-Light.otf')format('opentype');	
+			
+		}
+
+		p:nth-of-type(1) {
+			font-family:other;
+			font-size: 25px;
+		}
+
+		p:nth-of-type(2) {
+			font-family:otherL,arial-webfont;
+		}
+		
+	</style>
+	<div ng-controller="controladorPostal">
+		<input type="text" placeholder="codigoPostal"  ng-model="codigo" ng-keypress="enter($event)"></input>
+		<input type="text" placeholder="estado" ng-model="edo">
+		<input type="text" placeholder="municipio" ng-model="mun">
+		<div id="div" width="100%"> 
+		<p>TU HOGAR ACOMPAÑÁNDOTE</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<button ng-click="pdf()">click</button>
+	</div>
+</form>
