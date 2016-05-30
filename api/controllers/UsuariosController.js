@@ -82,8 +82,10 @@ module.exports = {
 		})
 	},
 	delete: function(req, res){
+		console.log(req.params.name);
 		Usuarios.destroy({
-			id:  req.params.id
+			//id:  req.params.id
+			name:  req.params.name
 		},function (err, deleteusuario){
 			if (err){
 				return res.serverError({

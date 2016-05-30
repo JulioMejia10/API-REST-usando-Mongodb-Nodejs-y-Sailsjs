@@ -1,6 +1,6 @@
 angular.module('Datos.module',[])
 .controller('datos', ['$scope', 'servicios', function($scope,servicios){
-	console.log('hola datos');
+	//console.log('hola datos');
 	$scope.reg = {};
 	servicios.Alldatos()
 	.success(function(res){
@@ -32,10 +32,11 @@ angular.module('Datos.module',[])
 			console.log(res);
 		})
 	}
-	$scope.delete = function (){
-		//console.log('delete');
-		var nom = '57477fa98e675ac81bd4bb4d'
-		servicios.delete(nom)
+	$scope.delete = function (nom){
+		//var nom = '573fa526f38bc8d1772298b6'
+		var nombre = nom;
+		//console.log(nombre);
+		servicios.delete(nombre)
 		.success(function(res){
 			console.log(res);
 		})

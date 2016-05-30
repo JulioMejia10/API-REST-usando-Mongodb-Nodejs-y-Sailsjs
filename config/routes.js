@@ -63,7 +63,7 @@ module.exports.routes = {
   'POST /usuario' : 'UsuariosController.createUsuario',
   'GET /usuarios' : 'UsuariosController.findUsuario',
   'PUT /usuarioUpdate/:id' : 'UsuariosController.updateUsuario',
-  'DELETE /elimina/:id' : 'UsuariosController.delete'
+  'DELETE /elimina/:name' : 'UsuariosController.delete'
   
   /*
 
