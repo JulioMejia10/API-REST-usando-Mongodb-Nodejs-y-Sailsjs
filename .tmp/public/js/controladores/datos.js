@@ -24,7 +24,9 @@ angular.module('Datos.module',[])
 
 	$scope.update = function (reg) {
 		console.log(reg)
-		servicios.update(reg)
+		var nombre = reg.name;
+		console.log(nombre);
+		servicios.update(nombre,reg)
 		.success(function(res){
 			console.log(res);
 		})

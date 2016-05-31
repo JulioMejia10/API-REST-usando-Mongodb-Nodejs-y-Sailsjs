@@ -19,8 +19,8 @@ angular.module('miServices', [])
 			Alldatos: function () {
 				return $http.get('/usuarios');
 			},
-			update: function (data) {
-				return $http.put('/usuarioUpdate/',data);
+			update: function (nom,data) {
+				return $http.put('/usuarioUpdate/' + nom,data);
 			},
 			delete: function(nom) {
 				return $http.delete('/elimina/' + nom);

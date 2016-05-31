@@ -61,13 +61,14 @@ module.exports = {
 			/*name: body.name,
 			apellido: body.apellido,
 			correo : body.correo*/
-			name: 'pato',
-			apellido: 'patin',
-			correo : '@global.panchis'
+			name: body.name,
+			apellido: body.apellido,
+			correo : body.correo
 		}
 		//console.log(body);
 		Usuarios.update({
-			id :req.params.id
+			//id :req.params.id
+			name : req.params.name
 		},datos,function (err, actualizado){
 			if (err){
 				return res.serverError({
