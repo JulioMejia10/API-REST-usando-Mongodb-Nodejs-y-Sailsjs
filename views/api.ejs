@@ -1,5 +1,5 @@
-<section>
-	<a href="/usuarios">GetAll</a>
+<!--section>
+	
 	<form ng-controller="datos">
 		<label>nombre</label>
 		<input type="text" ng-model="reg.name">
@@ -11,4 +11,26 @@
 		<button ng-click="update(reg)">Update</button>
 		<button ng-click="delete(reg.name)">delete</button>
 	</form>
-</section>
+</section-->
+<!--boostrap-->
+<h3 class="title">API-REST FULL</h3>
+<form class="formulario" ng-controller="datos">
+  <div class="form-group ">
+    <label for="exampleInputEmail1">Nombre</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre" ng-model="reg.name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Apellido</label>
+    <input type="pastext" class="form-control" id="exampleInputPassword1" placeholder="Apellido"  ng-model="reg.apellido">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Correo</label>
+    <input type="pastext" class="form-control" id="exampleInputPassword1" placeholder="Correo"  ng-model="reg.correo">
+  </div>
+  
+  <button type="submit" class="btn btn-default" ng-click="guardar(reg)">Guardar</button>
+  <button type="submit" class="btn btn-default" ng-click="update(reg)">Actualizar</button>
+  <button type="submit" class="btn btn-default" ng-click="delete(reg.name)">Eliminar</button>
+  <a href="/usuarios">GetAll</a>
+
+</form>
