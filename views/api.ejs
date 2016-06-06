@@ -1,5 +1,4 @@
 <!--section>
-	
 	<form ng-controller="datos">
 		<label>nombre</label>
 		<input type="text" ng-model="reg.name">
@@ -32,5 +31,8 @@
   <button type="submit" class="btn btn-default" ng-click="update(reg)">Actualizar</button>
   <button type="submit" class="btn btn-default" ng-click="delete(reg.name)">Eliminar</button>
   <a href="/usuarios">GetAll</a>
+  <div class="alert alert-info btns" role="alert" ng-show="create">Se guardo corectamente</div>
+  <div class="alert alert-info" role="alert" ng-show="put">se actualizó correctamente</div>
+  <div class="alert alert-info" role="alert" ng-show="!delete">dato eliminado</div>
 
 </form>

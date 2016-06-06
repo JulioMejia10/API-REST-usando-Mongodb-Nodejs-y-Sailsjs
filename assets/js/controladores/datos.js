@@ -2,6 +2,9 @@ angular.module('Datos.module',[])
 .controller('datos', ['$scope', 'servicios', function($scope,servicios){
 	//console.log('hola datos');
 	$scope.reg = {};
+	$scope.create = false;
+	$scope.put = false;
+	$scope.delete = false;
 	servicios.Alldatos()
 	.success(function(res){
 		console.log(res);
@@ -16,6 +19,9 @@ angular.module('Datos.module',[])
 		servicios.Datos(reg)
 		.success(function(res){
 			console.log(res);
+			$scope.create = true;
+			$scope.put = false;
+			$scope.delete = true;
 		}).error(function(res){
 			console.log(res);
 		})
@@ -29,6 +35,9 @@ angular.module('Datos.module',[])
 		servicios.update(nombre,reg)
 		.success(function(res){
 			console.log(res);
+			$scope.create = false;
+			$scope.put = true;
+			$scope.delete = true;
 		})
 		.error(function(res){
 			console.log(res);
@@ -41,6 +50,9 @@ angular.module('Datos.module',[])
 		servicios.delete(nombre)
 		.success(function(res){
 			console.log(res);
+			$scope.create = false;
+			$scope.put = false;
+			$scope.delete = false;
 		})
 		.error(function(res){
 			console.log(res);

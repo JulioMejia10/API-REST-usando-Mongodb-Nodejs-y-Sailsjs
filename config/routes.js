@@ -32,68 +32,15 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
   '/': {
-    view: 'principal'
-  },
-  '/codigoP': {
-    view :'postal'
-  },
-  
-  '/index': {
-    view: 'index'
-  },
-  '/pago': {
-    view: 'formadePago'
-  },
-  '/log': {
-    view: 'login1'
-  },
-  '/log6': {
-    view: 'log6'
-  },
-  '/log8': {
-    view: 'vista8'
-  },
-  '/img': {
-    view: 'imagenes'
-  },
-  '/api' : {
     view: 'api'
   },
+
 
   'POST /usuario' : 'UsuariosController.createUsuario',
   'GET /usuarios' : 'UsuariosController.findUsuario',
   'PUT /usuarioUpdate/:name' : 'UsuariosController.updateUsuario',
   'DELETE /elimina/:name' : 'UsuariosController.delete'
   
-  /*
-
-  '/': {
-    view: 'logeando'
-  },
-  '/index': {
-    view: 'index'
-  },
-  '/login': {
-    view:'logeando'
-  },
-  '/promesas': {
-    view: 'promises'
-  },
-  '/formulario': {
-    view: 'form'
-  },
-  '/codigoP': {
-    view :'postal'
-  },
-  '/modal' : {
-    view :'ruteo'
-  }
-*/
-  
-
-  /*,
-  'POST : /postUsuario' : 'UsuariosController.postUsuarios',
-  'GET : /getUsuario'   : 'UsuariosController.getUsuarios'*/
 
   /***************************************************************************
   *                                                                          *
