@@ -9,6 +9,8 @@ Primero que nada tenemos que tener corriendo mongodb en tu computadora.
   
   ya que esta instalado ya puedes usar el NPM.
   intsalamos sails de forma glonbal:
+  
+  http://sailsjs.org/documentation/reference/command-line-interface/sails-lift
   npm install sails -g
   
   ahora creamos nuestro proyecto con el siguiente comando:
